@@ -149,6 +149,10 @@ if (!empty($_SESSION['cart']))
                 <div class="hotro">
                     <span>Để các chuyên viên hỗ trợ bạn sản phẩm phù hợp nhất cho nhu cầu và túi tiền của bạn.</span>
                 </div>
+                <?php
+                echo "
+                <a href='add-cart.php?id=".$id."'><div class='add_cart full''><i></i>THÊM VÀO GIỎ HÀNG </div>"
+                ?>
             </aside><!--desProduct-->
             <aside class="ckProduct">
                 <div class="titile">

@@ -258,7 +258,7 @@ a.goa_shopping {
     width: 120px;
     text-align: center;
     color: #fff !important;
-    margin-top: 10px;
+    margin-top: 16px;
     float:right;
     border-radius:7px;
 }
@@ -531,10 +531,19 @@ div.sliderows .row_product
     cursor: pointer;
     font-size: 13px;
     margin: 4px auto auto;
-    padding: 6px;
+    padding: 10px;
     text-align: center;
-    width: 145px;
+    width: 60%;
 }
+
+
+.add_cart.full {
+    margin-top: 16px;
+    width: 90%;
+    font-size: 20px;
+}
+  
+
 .add_cart i {
     display: inline-block;
     font-size: 16px;
@@ -1305,6 +1314,13 @@ section.product_d .detailP .desProduct h1.detailPT {
     text-align: center;
     width: 212px;
 }
+.proDha .yctv:hover {
+    background: #d62e4d;
+    color: #fff;
+}
+.proDha .yctv:hover a{
+    color: #fff;
+}
 .proDha .btDah:hover, .right_roduct_hd .btDah:hover {
     background: #ef0d51;
 }
@@ -1522,7 +1538,7 @@ h2.uppercaseh2
     color: #FFF;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 600;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 12px;
@@ -1669,6 +1685,10 @@ strong.sum_sp
     padding:9px;
     border:none;
 }
+
+.go_shopping {
+    margin-right: 16px;
+}
 .go_shopping .cap_nhat_cart {
     margin-top: 7px !important;
 }
@@ -1678,12 +1698,14 @@ input.cap_nhat_cart:hover
     cursor:pointer;
 }
 a.dat_hang {
-    float: right;
+    float: left;
+    margin-right: 24px;
     background: #ef4679;
     color: #fff;
-    border-radius: 12px;
+    border-radius: 7px;
     cursor:pointer;
     padding:9px;
+    font-weight: 500;
 }
 a.dat_hang:hover
 {
@@ -1696,7 +1718,6 @@ a#dat_hang
     color: #fff;
     border-radius: 12px;
     cursor:pointer;
-    padding:9px;
 }
 a#dat_hang:hover
 {

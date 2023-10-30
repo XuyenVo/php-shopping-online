@@ -194,7 +194,6 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                                 $_SESSION['cart'] = array();}
                                 ?>
                                 <div class="go_shopping">
-                                    <input type="submit" name="update_cart" value="Cập nhật giỏ hàng" class="cap_nhat_cart"/>
                                     <a href="<?php echo $base?>/cart.php" class="goa_shopping">GIỎ HÀNG</a></div>
                             </div><!--end cart_order-->
                         </form>

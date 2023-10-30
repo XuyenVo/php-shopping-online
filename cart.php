@@ -67,11 +67,12 @@ include("apps/libs/header.php");
 <div class="bottom_button">
 <p class="update_cart">
     <input type="submit" name="update_cart" value="Cập nhật giỏ hàng" class="cap_nhat_cart"/>
-        <a href="'.$base.'/checkout.php" class="dat_hang" style="display:block;">Thanh toán</a>
-    
-</p><!--end update-cart--->
+</p>
+<hr />
+<!--end update-cart--->
 
 <p class="sum_money">Tổng sản phẩm:<strong class="sum_sp"> '.$sum_sp.'</strong><br/>Tổng tiền:<strong class="sum_sp"> '.number_format($sum_all).' VNĐ</strong></p>
+<a href="'.$base.'/checkout.php" class="dat_hang" style="display:block;">THANH TOÁN</a>
 <a href="<?php echo $base ?>" class="back_page"> Tiếp tục mua hàng</a>
 <a href="del-product.php?id=0" class="delete_all">Xóa giỏ hàng</a>
 </div>
