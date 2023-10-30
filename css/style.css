@@ -1601,9 +1601,15 @@ h2.uppercaseh2
     text-align: center;
 }
 .cart_oder_1 ul li.dg_cart, .cart_oder_1 ul li.tt_cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 200px;
-    text-align: center;
     font-size:14px;
+}
+
+.cart_oder_1 ul li.dg_cart div, .cart_oder_1 ul li.tt_cart div{
+    height: fit-content;
 }
 
 .cart_ul tt

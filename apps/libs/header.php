@@ -179,7 +179,7 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                                                 <li class="sl"><input type="text"
                                                                       name="num[<?php echo $rows['id_sanpham']; ?>]"
                                                                       value="<?php echo $_SESSION['cart'][$rows['id_sanpham']]; ?>"
-                                                                      size="3" class="capnhatCartTxt"/></li>
+                                                                      size="3" class="capnhatCartTxt" disabled/></li>
                                                 <li class="tt"><?php echo number_format($rows['price'] * $_SESSION['cart'][$rows['id_sanpham']]); ?> VNĐ
                                                 </li>
                                             </ul>

@@ -49,13 +49,13 @@ include("apps/libs/header.php");
                                 class="del_sp">Xóa</a></div>
 
                 </li>
-                <li class="dg_cart"><?php echo number_format($rows['price']); ?> VNĐ</li>
+                <li class="dg_cart"><div><?php echo number_format($rows['price']); ?> VNĐ</div></li>
                 <li class="sl_cart"><input type="text"
                                       name="num[<?php echo $rows['id_sanpham']; ?>]"
                                       value="<?php echo $_SESSION['cart'][$rows['id_sanpham']]; ?>"
                                       size="3" class="capnhatCartTxt"/></li>
-                <li class="tt_cart"><?php echo number_format($rows['price'] * $_SESSION['cart'][$rows['id_sanpham']]); ?>
-                    VNĐ
+                <li class="tt_cart"><div><?php echo number_format($rows['price'] * $_SESSION['cart'][$rows['id_sanpham']]); ?>
+                    VNĐ </div>
                 </li>
             </ul>
             <?php
