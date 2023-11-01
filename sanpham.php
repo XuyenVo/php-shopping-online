@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <?php
-require("apps/config.php");
-require("apps/libs/header.php");
+require("config.php");
+require("header.php");
 ?>
 
 <body>
@@ -84,7 +84,7 @@ require("apps/libs/header.php");
 								<div class='rating-box'>
 								</div><!--end ratingbox-->
 							</div><!--end ratings-->
-							<a href='add-cart.php?id=" . $row['id_sanpham'] . "'><div class='add_cart''><i></i>THÊM VÀO GIỎ </div></a>
+							<a href='controllers/add-cart.php?id=" . $row['id_sanpham'] . "'><div class='add_cart''><i></i>THÊM VÀO GIỎ </div></a>
 							";
                         echo "</div><!--end product_items-->";
                     }
@@ -119,7 +119,7 @@ require("apps/libs/header.php");
             </div><!--end phan_page-->
         </aside><!--end ben phai-->
     </section><!--end content ld-->
-    <?php require("apps/libs/footer.php"); ?>
+    <?php require("footer.php"); ?>
 </body>
 
 </html>

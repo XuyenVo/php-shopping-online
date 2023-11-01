@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
-ErrorDocument 404 http://localhost:8080/webbanhang
+ErrorDocument 404 http://localhost/webbanhang2
 <FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh) $">
 Order Allow,Deny
 Deny from all

@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <?php
-include ('apps/config.php');
-include ("apps/libs/header.php");
+include ('config.php');
+include ("header.php");
 ?>
 
 <section class="content_ldd">
@@ -105,5 +105,5 @@ if (!empty($_GET['s'])) {
     </div><!--end phan_page-->
 </aside><!--end ben phai-->
 </section><!--end content ld-->
-<?php require("apps/libs/footer.php"); ?>
+<?php require("footer.php"); ?>
 </html>

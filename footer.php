@@ -2,7 +2,7 @@
     <div class="splitter"></div>
     <ul>
         <li>
-            <div class="icon" data-icon="E"><a href="<?php echo $base; ?>"><img src="<?php echo $base; ?>/images/logo.png" style="width: 350px;" alt="logo footer" /></a></div>
+            <div class="icon" data-icon="E"><a href="<?php echo $base; ?>"><img src="<?php echo $base; ?>images/logo.png" style="width: 200px;" alt="logo footer" /></a></div>
             <p>Túi xách </p>
         </li>
         <li>
@@ -10,11 +10,11 @@
                 <h4>LIÊN HỆ</h4>
                 <div>Kênh mua sắm trực tuyến giá tốt hàng đầu Việt Nam</div>
                 <br>
-                <img src="<?php echo $base; ?>/images/icon/pre_footer_icon_address.png">
+                <img src="<?php echo $base; ?>images/icon/pre_footer_icon_address.png">
                 <span>Hoàng Diệu 2. Linh Trung, Tp.Thủ Đức</span><br>
-                <img  src="<?php echo $base; ?>/images/icon/pre_footer_icon_phone.png">
+                <img  src="<?php echo $base; ?>images/icon/pre_footer_icon_phone.png">
                 <span>(+84) 3653682226</span><br>
-                <img  src="<?php echo $base; ?>/images/icon/pre_footer_icon_email.png">
+                <img  src="<?php echo $base; ?>images/icon/pre_footer_icon_email.png">
                 <span>namngh23@gmail.com</span>
             </div>
         </li>

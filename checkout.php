@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="vi">
 <?php
-require ("apps/config.php");
-require ("apps/libs/header.php");
+require ("config.php");
+require ("header.php");
 ?>
 <body>
 <div class="navigation"></div>
@@ -107,7 +107,7 @@ require ("apps/libs/header.php");
  <a href='".$base."' style='color: blue'>Trở lại trang chủ</a></span>
  ";}
             ?>
-<?php include ("apps/libs/footer.php");
+<?php include ("footer.php");
 ?>
 <style>
      form input.ht, form input.em, form input.tdn,form input.pw, form input.xnpw, form input.sdt, form input.dcgh, textarea{

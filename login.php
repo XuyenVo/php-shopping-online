@@ -1,5 +1,5 @@
 <?php
-include "apps/config.php";
+include "config.php";
 //Kiểm tra - thông báo lỗi
 if(isset($_POST["btnsubmit"]))
 {
@@ -39,7 +39,7 @@ if(isset($_POST["btnsubmit"]))
 ?>
 <!DOCTYPE HTML>
 <html lang="vi">
-<?php include "apps/libs/header.php"; ?>
+<?php include "header.php"; ?>
 <body>
 <!--ĐĂNG NHẬP-->
 <div class="login-box">
@@ -62,7 +62,7 @@ if(isset($_POST["btnsubmit"]))
             <button class="submit button" type="submit" name="btnsubmit">Đăng nhập</button>
 
             <div class="dk-qmk">
-                <a class="forgot" href="forgetpwd.php">Quên mật khẩu?</a> <a href="/register.php" class="register">Đăng ký</a>
+                <a class="forgot" href="forgetpwd.php">Quên mật khẩu?</a> <a href="register.php" class="register">Đăng ký</a>
             </div>
         </fieldset>
     </form>
@@ -73,7 +73,7 @@ if(!empty($errors)) echo $errors;
 ?>
 <!--end login-->
 <!--END ĐĂNG NHẬP-->
-<?php include ("apps/libs/footer.php");
+<?php include ("footer.php");
 
 ?>
 </body>

@@ -73,7 +73,7 @@
         ?>
 
         <?php 
-        include ("apps/libs/footer.php");
+        include ("footer.php");
 
         ?>
     </body>

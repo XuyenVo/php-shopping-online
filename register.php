@@ -2,8 +2,8 @@
 <html lang="vi">
 <?php
 ob_start();
-include "apps/config.php";
-include "apps/libs/header.php";
+include "config.php";
+include "header.php";
 // so san pham da add vao cart
 $prd = 0;
 if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
@@ -91,7 +91,7 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
 
 
 <div class="clear10px"></div>
-<?php include ("apps/libs/footer.php");
+<?php include ("footer.php");
 ob_end_flush();
 ?>
 </body>

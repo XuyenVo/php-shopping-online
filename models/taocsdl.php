@@ -1,7 +1,4 @@
 <?php
-//Ha Van Linh
-//1521050206
-//database web ban hang
 
 $con = mysqli_connect('localhost', 'root', '');
 //print_r($con);die();
@@ -186,6 +183,6 @@ $alttab17 = mysqli_query($con,"ALTER TABLE `user`
 else {
     echo "Tạo database thất bại " . mysqli_error($conn);
 }
-// Tạo xong thì ngắt kết nối
+
 ?>
 

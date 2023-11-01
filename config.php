@@ -1,5 +1,5 @@
 <?php
-$base = str_replace($_SERVER['DOCUMENT_ROOT'],'',str_replace('\\','/',dirname(__FILE__,2)));
+$base = str_replace($_SERVER['DOCUMENT_ROOT'],"/webbanhang2/",str_replace('\\','/',dirname(__FILE__,2)));
 $host = 'localhost';
 $username = 'root';
 $password = '';

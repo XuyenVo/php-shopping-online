@@ -15,8 +15,8 @@ if (!empty($_SESSION['cart']))
 
 <body>
     <?php
-    include("apps/config.php");
-    include("apps/libs/header.php");
+    include("config.php");
+    include("header.php");
     ?>
     <div id="fb-root"></div>
     <script>(function (d, s, id) {
@@ -151,7 +151,7 @@ if (!empty($_SESSION['cart']))
                 </div>
                 <?php
                 echo "
-                <a href='add-cart.php?id=".$id."'><div class='add_cart full''><i></i>THÊM VÀO GIỎ HÀNG </div>"
+                <a href='controllers/add-cart.php?id=".$id."'><div class='add_cart full''><i></i>THÊM VÀO GIỎ HÀNG </div>"
                 ?>
             </aside><!--desProduct-->
             <aside class="ckProduct">
@@ -223,7 +223,7 @@ if (!empty($_SESSION['cart']))
             </aside><!--end productEditQri-->
         </div>
     </section>
-    <?php include("apps/libs/footer.php"); ?>
+    <?php include("footer.php"); ?>
 </body>
 
 </html>

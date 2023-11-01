@@ -6,7 +6,7 @@
 
         <?php
 
-        include "apps/config.php";
+        include "config.php";
         //Kiểm tra - thông báo lỗi
         if(isset($_POST["btnxacnhan"]))
         {
@@ -38,7 +38,7 @@
         ?>
         <!DOCTYPE HTML>
         <html lang="vi">
-        <?php include "apps/libs/header.php"; ?>
+        <?php include "header.php"; ?>
         <body>
         <!--ĐĂNG NHẬP-->
         <div class="login-box">
@@ -65,7 +65,7 @@
         if(!empty($errors)) echo $errors;
         ?>
 
-        <?php include ("apps/libs/footer.php");
+        <?php include ("footer.php");
 
         ?>
     </body>

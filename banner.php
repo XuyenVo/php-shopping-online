@@ -1,5 +1,5 @@
 <?php
-include("apps/config.php");
+include("config.php");
 ?>
 <div class="owl-carousel owl-theme">
     <!-- Backend -->
@@ -12,7 +12,6 @@ include("apps/config.php");
     }
     ?>
 </div>
-<h2>sdvnhiosdvndosvkn</h2>
 <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
 <script>

@@ -1,5 +1,5 @@
 <?php
-include ("apps/config.php");
+include ("config.php");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -20,7 +20,7 @@ include ("apps/config.php");
         if($_SESSION['cart'] != NULL) {
             echo "
             <form method='post'>
-            <div class='main-shopping'>
+            <div class='main-shopping'></div>
             <p class='cart_info'>
             Thông tin chi tiết giỏ hàng!";
             $now = getdate();

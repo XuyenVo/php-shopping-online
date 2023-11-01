@@ -7,16 +7,17 @@ $prd = 0;
 if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
 ?>
 <head>
-    <title>Website chuyên bán</title>
+    <title>Website chuyên bán Túi xách - Ví - Bóp thời trang</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="shortcut icon" href="<?php echo $base; ?>logo.png" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $base; ?>/css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo $base; ?>/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo $base; ?>/css/fontawesome-all.min.css" media='all'/>
-    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">-->
+    <link rel="shortcut icon" href="<?php echo $base; ?>images/logo.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="<?php echo $base; ?>css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $base; ?>css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $base; ?>css/fontawesome-all.min.css" media='all'/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;subset=vietnamese">
-    <link rel="stylesheet" href="<?php echo $base; ?>/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?php echo $base; ?>/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo $base; ?>css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo $base; ?>css/owl.theme.default.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </head>
 <div id ="header">
     <div class ="topbar">
@@ -32,7 +33,7 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                 </a>
             </div><!--end logo-->
             <div class="search">
-                <form class="searchform" action="<?php echo $base ?>/search.php" method="get">
+                <form class="searchform" action="<?php echo $base ?>search.php" method="get">
                  <input class="s" placeholder="Tìm kiếm …" type="text" name="s" width="300px" />
                   <button class="searchsubmit" type="submit">
                 </form>
@@ -59,13 +60,13 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                                       WHERE id_catalog =".$menu_items['id_catalog'];
                     $submenu_res = mysqli_query ($conn,$submenu_query) or die ('Cannot select menu'.mysqli_error($conn));
                     /*--------------------------------SHOW MENU-------------------------------------------*/
-                    echo "<div class='menu_leve_1'><a href = '".$base."/sanpham.php?id_menu=".$menu_items['id_catalog']."' class='parent'>".$menu_items['name_menu']."</a>
+                    echo "<div class='menu_leve_1'><a href = '".$base."sanpham.php?id_menu=".$menu_items['id_catalog']."' class='parent'>".$menu_items['name_menu']."</a>
                 <ul class='menuHiden' style='display: none;margin-bottom: 0px;margin-top: 0px;padding-left: 0px;padding-H:10px;'>";
 /*                        echo "<li class='active'><a href='".$submenu_items['link_sub']."'><br/>".$menu_items['name_sub']."</a>
                                 <ul style='padding-left:0px;padding-bottom:10px;'>";*/
                         while($submenu_items = mysqli_fetch_array($submenu_res,MYSQLI_ASSOC))
                         {
-                            echo"<li><a href='".$base."/sanpham.php?id_menu=".$submenu_items['id_sub']."'>". $submenu_items['name_sub']." </a></li>";
+                            echo"<li><a href='".$base."sanpham.php?id_menu=".$submenu_items['id_sub']."'>". $submenu_items['name_sub']." </a></li>";
                         }
                         echo "
                                 </ul>
@@ -85,7 +86,7 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                         <a href=''>Xin chào: ".$_SESSION['username']. "</a>
                         </div>
                         <ul class='header_logout'>
-                            <li><a href='".$base."/logout.php'>Đăng xuất</a></li>
+                            <li><a href='".$base."logout.php'>Đăng xuất</a></li>
                         </ul>
                         </div>";
                                     }
@@ -95,8 +96,8 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                         <a href=''>Xin chào: ".$_SESSION['username']. "</a>
                         </div>
                         <ul class='header_logout'>
-                            <li><a href='".$base."/admin/index.php'>Quản lý</a></li>
-                            <li><a href='".$base."/logout.php'>Đăng xuất</a></li>
+                            <li><a href='".$base."admin/index.php'>Quản lý</a></li>
+                            <li><a href='".$base."logout.php'>Đăng xuất</a></li>
                         </ul>
                         </div>";
                                     }
@@ -106,8 +107,8 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                         <a href="#" title="" class="fa fa-user"></a>
                     </div>
                     <ul class="header_login_reg">
-                        <li><a href="'.$base.'/login.php">Đăng nhập</a></li>
-                        <li><a href="'.$base.'/register.php">Đăng Kí</a></li>
+                        <li><a href="'.$base.'login.php">Đăng nhập</a></li>
+                        <li><a href="'.$base.'register.php">Đăng Kí</a></li>
                     </ul>
                 </div>';
                     }
@@ -119,14 +120,14 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                         <a href="#" title="" class="fa fa-user"></a>
                     </div>
                     <ul class="header_login_reg">
-                        <li><a href="'.$base.'/login.php">Đăng nhập</a></li>
-                        <li><a href="'.$base.'/register.php">Đăng Kí</a></li>
+                        <li><a href="'.$base.'login.php">Đăng nhập</a></li>
+                        <li><a href="'.$base.'register.php">Đăng Kí</a></li>
                     </ul>
                 </div>';
                 }
                 ?>
                 <div class="cart_div">
-                    <a href="<?php echo $base?>/cart.php" class="cart_top">
+                    <a href="<?php echo $base?>cart.php" class="cart_top">
                         <span class="count"><?php echo $prd; ?></span><!--end count-->
                         <span class="tit">Giỏ hàng</span><!--end tit-->
                     </a>
@@ -148,12 +149,13 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                         }
                         ?>
                         <form method="post">
-                            <div class="cart_oder">
+                            <div class="cart_order">
                                 <ul class="top_cart">
                                     <li class="sp">SẢN PHẨM </li>
                                     <li class="dg">ĐƠN GIÁ</li>
                                     <li class="sl">SL</li>
                                     <li class="tt">THÀNH TIỀN</li>
+                                    <li class="ch"></li>
                                 </ul>
                                 <?php
                                 if (isset($_SESSION['cart'])) {
@@ -170,10 +172,6 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                                                 <li class="sp">
                                                     <img src="images/<?php echo $rows['image_sp']; ?>" class="cartImg">
                                                     <b class="Cart_title_pro"><?php echo $rows['tensp']; ?></b>
-                                                    <div class="delete_Cart"><a
-                                                                href="<?php echo $base?>/del-product.php?id=<?php echo $rows['id_sanpham']; ?>"
-                                                                class="del_sp">Xóa</a></div>
-
                                                 </li>
                                                 <li class="dg"><?php echo number_format($rows['price']); ?> VNĐ</li>
                                                 <li class="sl"><input type="text"
@@ -181,6 +179,11 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                                                                       value="<?php echo $_SESSION['cart'][$rows['id_sanpham']]; ?>"
                                                                       size="3" class="capnhatCartTxt" disabled/></li>
                                                 <li class="tt"><?php echo number_format($rows['price'] * $_SESSION['cart'][$rows['id_sanpham']]); ?> VNĐ
+                                                </li>
+                                                <li> 
+                                                    <div class="delete_Cart"><a
+                                                                href="<?php echo $base?>controllers/del-product.php?id=<?php echo $rows['id_sanpham']; ?>"
+                                                                class="del_sp"><i class="fa fa-trash" aria-hidden="true"></i></a></div>
                                                 </li>
                                             </ul>
 
@@ -194,7 +197,7 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
                                 $_SESSION['cart'] = array();}
                                 ?>
                                 <div class="go_shopping">
-                                    <a href="<?php echo $base?>/cart.php" class="goa_shopping">GIỎ HÀNG</a></div>
+                                    <a href="<?php echo $base?>cart.php" class="goa_shopping">GIỎ HÀNG</a></div>
                             </div><!--end cart_order-->
                         </form>
                     </div><!--End Quick-->

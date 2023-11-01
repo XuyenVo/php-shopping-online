@@ -3,8 +3,8 @@
 
 <body>
 <?php
-include("apps/config.php");
-include_once ("apps/libs/header.php");?>
+include("config.php");
+include_once ("header.php");?>
 <div class="container">
 <div id ="wrapper">
         <!-- banner --><div class="banner">
@@ -76,7 +76,7 @@ include_once ("apps/libs/header.php");?>
 					<div class='ratings'>
 						<div class='rating-box'></div><!--end ratingbox-->
 					</div><!--end ratings-->
-					<a href='add-cart.php?id=".$tuixach_items['id_sanpham']."'><div class='add_cart''><i></i>THÊM VÀO GIỎ </div></a>
+					<a href='controllers/add-cart.php?id=".$tuixach_items['id_sanpham']."'><div class='add_cart''><i></i>THÊM VÀO GIỎ </div></a>
 					";
                                     ?>
                                 </div><!--end row_product_h-->
@@ -158,7 +158,7 @@ include_once ("apps/libs/header.php");?>
 </div><!--End Wrapper--->
 </div>
 <!------------------------------------------FOOTER------------------------------------------------------>
-<?php include ("apps/libs/footer.php");?>
+<?php include ("footer.php");?>
 <!------------------------------------------END FOOTER------------------------------------------------------>
 </body>
 </html>
