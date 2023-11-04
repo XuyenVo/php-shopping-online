@@ -1,0 +1,99 @@
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 12
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 13
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 14
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 15
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 17
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 18
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 26
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 36
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 53
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Warning:  Undefined variable $conn in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 55
+[04-Nov-2023 10:24:40 UTC] PHP Stack trace:
+[04-Nov-2023 10:24:40 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:24:40 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\wamp64\www\Webbanhang2\admin\header_admin.php:55
+Stack trace:
+#0 C:\wamp64\www\Webbanhang2\admin\header_admin.php(55): mysqli_query(NULL, 'SELECT * FROM m...')
+#1 {main}
+  thrown in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 55
+[04-Nov-2023 10:25:17 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 12
+[04-Nov-2023 10:25:17 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:17 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:17 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 13
+[04-Nov-2023 10:25:17 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:17 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:17 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 14
+[04-Nov-2023 10:25:17 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:17 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:17 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 15
+[04-Nov-2023 10:25:17 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:17 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:17 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 17
+[04-Nov-2023 10:25:17 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:17 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:17 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 18
+[04-Nov-2023 10:25:17 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:17 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:18 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 26
+[04-Nov-2023 10:25:18 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:18 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:18 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 43
+[04-Nov-2023 10:25:18 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:18 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:18 UTC] PHP Warning:  Undefined variable $conn in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 45
+[04-Nov-2023 10:25:18 UTC] PHP Stack trace:
+[04-Nov-2023 10:25:18 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:25:18 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\wamp64\www\Webbanhang2\admin\header_admin.php:45
+Stack trace:
+#0 C:\wamp64\www\Webbanhang2\admin\header_admin.php(45): mysqli_query(NULL, 'SELECT * FROM m...')
+#1 {main}
+  thrown in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 45
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 12
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 13
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 14
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 15
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 17
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 18
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 26
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $base in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 43
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Warning:  Undefined variable $conn in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 45
+[04-Nov-2023 10:26:10 UTC] PHP Stack trace:
+[04-Nov-2023 10:26:10 UTC] PHP   1. {main}() C:\wamp64\www\Webbanhang2\admin\header_admin.php:0
+[04-Nov-2023 10:26:10 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in C:\wamp64\www\Webbanhang2\admin\header_admin.php:45
+Stack trace:
+#0 C:\wamp64\www\Webbanhang2\admin\header_admin.php(45): mysqli_query(NULL, 'SELECT * FROM m...')
+#1 {main}
+  thrown in C:\wamp64\www\Webbanhang2\admin\header_admin.php on line 45
