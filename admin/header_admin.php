@@ -26,7 +26,7 @@
         </div>
     </nav>
     <div class="menu-tab">
-        <ul class="nav">
+        <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="product.php">Quản lý sản phẩm</a>
             </li>

@@ -7,63 +7,54 @@
         }
     </style>
 </head>
-<?php
-if (isset($_POST['ten_sp'])) {
-    require_once "../config.php";
-    $tenSanpham = $_POST["ten_sp"];
-    $maSanpham = $_POST["ma_sp"];
-    $gia = $_POST["gia"];
-    $mota = $POST["mo_ta"];
-    $content = $POST["content"];
-    $giamgia = $POST["giamgia"];
-    $xuatxu = $_POST["xuatxu"];
-    $hinh = $POST["hinh"];
-    $size = $POST["size"];
-    $color = $POST["color"];
-    $parent = $POST["parent_name_menu"];
-    $sql = "insert into sanpham(tensp, code_product, price, description, content, discount, image_sp, xuatxu, sizess, mausac, parent_name_menu) 
-                               values()";
-    $result = mysqli_query($conn, $sql);
-    header("Location: web_qlnv.php"); //chuyển hướng
-} else {
-    ?>
 
-    <body class="m-3">
-        <h2>THÊM SẢN PHẨM MỚI</h2>
-        <form action="add_product.php" method="post" name="addProduct" class="col-2">
-            <div class="form-group m-2">
-                <label for="inputInfor" class="col-10">Tên sản phẩm:</label>
-                <input class="form-control" type="text" name="ten_sp" placeholder=" " />
-            </div>
-            <div class="form-group m-2">
-                <label for="inputInfor" class="col-10">Mã sản phẩm:</label>
-                <input class="form-control" type="text" name="ma_sp" placeholder=" " />
-            </div>
-            <div class="form-group m-2">
-                <label for="inputInfor" class="col-10">Giá sản phẩm:</label>
-                <input class="form-control" type="text" name="gia" placeholder=" " />
-            </div>
-            <div class="form-group m-2">
-                <label for="inputInfor" class="col-10">Mô tả sản phẩm:</label>
-                <textarea class="form-control" name="mo_ta" cols="23" rows="3"></textarea>
-            </div>
-            <div class="form-group m-2">
-                <label for="inputInfor" class="col-10">Nội dung sản phẩm:</label>
-                <textarea class="form-control" name="content" cols="23" rows="3"></textarea>
-            </div>
-            <div class="form-group m-2">
-                <label for="inputInfor" class="col-10">Giảm giá sản phẩm:</label>
-                <input class="form-control" type="text" name="giamgia" placeholder=" " />
-            </div>
-            <div class="form-group m-2">
-                <label for="inputInfor" class="col-10">Xuất xứ sản phẩm:</label>
-                <input class="form-control" type="text" name="xuatxu" placeholder=" " />
-            </div>
-            <input type="submit" value="Lưu" class="btn btn-primary m-3" />
-            <a href="web_qlnv.php" class="btn btn-primary" role="button" data-bs-toggle="button">Thoát</a>
+<body class="m-3">
+    <h2>THÊM SẢN PHẨM MỚI</h2>
+    <form action="upload_image.php" method="post" name="addProduct" class="col-2" enctype="multipart/form-data">
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Tên sản phẩm:</label>
+            <input class="form-control" type="text" name="ten_sp" placeholder=" " />
+        </div>
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Mã sản phẩm:</label>
+            <input class="form-control" type="text" name="ma_sp" placeholder=" " />
+        </div>
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Giá sản phẩm:</label>
+            <input class="form-control" type="text" name="gia" placeholder=" " />
+        </div>
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Mô tả sản phẩm:</label>
+            <textarea class="form-control" name="mo_ta" cols="23" rows="3"></textarea>
+        </div>
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Giảm giá sản phẩm:</label>
+            <input class="form-control" type="text" name="giamgia" placeholder=" " />
+        </div>
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Xuất xứ sản phẩm:</label>
+            <input class="form-control" type="text" name="xuatxu" placeholder=" " />
+        </div>
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Loại sản phẩm:</label>
+            <select class="form-control" type="text" name="id_sub" placeholder=" ">
+                <?php include 'select_loaisanpham.php'; ?>
+            </select>
+        </div>
+        <div class="form-group m-2">
+            <label for="inputInfor" class="col-10">Danh mục sản phẩm:</label>
+            <select class="form-control" type="text" name="id_catalog" placeholder=" ">
+                <?php include 'select_danhmuc.php'; ?>
+            </select>
+        </div>
+        <div class="form-group m-2">
+            Chọn hình ảnh sản phẩm:
+            <input type="file" name="hinh_sp" id="fileToUpload">
+        </div>
 
-        </form>
-    </body>
-    <?php
-}
-?>
+        <br>
+        <input type="submit" name="submit" value="Lưu" class="btn btn-primary" />
+        <a href="product.php" class="btn btn-primary" role="button" data-bs-toggle="button">Thoát</a>
+
+    </form>
+</body>

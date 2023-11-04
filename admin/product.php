@@ -111,7 +111,7 @@ echo "</script>";
                             <?php echo $row["code_product"]; ?>
                         </td>
                         <td>
-                            <?php echo $row["price"]; ?>
+                            <?php echo number_format($row["price"]); ?> VNĐ
                         </td>
                         <td>
                             <?php echo $row["xuatxu"]; ?>
