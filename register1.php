@@ -12,7 +12,7 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
 <div class="navigation">
 </div>
 <div class="re-gis">
-    <h1 class="DKTT"> Đăng ký tài khoản</h1>
+    <h1 class="DKTT"> Người dùng mới? Đăng ký tài khoản</h1>
     <form action="register.php" method="post" name="formdk">
         <label>Họ và tên:</label><br/>
         <input type="text" name="ht" class="ht" required/> <br/>
@@ -42,57 +42,49 @@ if(!empty($_SESSION['cart'])) $prd = count($_SESSION['cart']);
     </form></div><!--end re-gis-->
     <?php
 	
-    if (isset($_POST['sbmit'])) {
-        $hoten = $_POST['ht'];
-        $email = $_POST['email'];
-        $tendn = $_POST['tendn'];
-        $pw = md5($_POST['pw']);
-        $xnpw = md5($_POST['xnpw']);
-        $sdt = $_POST['sdt'];
-        $dcgh = $_POST['dcgh'];
-    
-        // Kiểm tra điều kiện bắt buộc cho các trường không được để trống
-        if (!$hoten || !$email || !$tendn || !$pw || !$xnpw || !$sdt || !$dcgh) {
+    if(isset($_POST['sbmit']))
+    {
+        $dk_query = mysqli_query($conn,"SELECT * FROM user ");
+        $dk_items  = mysqli_fetch_array($dk_query);
+        $hoten=trim($_POST['ht']);
+        $email=$_POST['email'];
+        $tendn=$_POST['tendn'];
+        $pw=md5($_POST['pw']);
+        $xnpw=md5($_POST['xnpw']);
+        $sdt=$_POST['sdt'];
+        $dcgh =$_POST['dcgh'];
+        $regex = "/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i";
+        //Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
+        if(!$hoten || !$email || !$tendn || !$pw || !$xnpw || !$sdt || !$dcgh)
+        {
+
             echo '<span id="errformdk">Vui lòng nhập thông tin đầy đủ!<a href="javascript: history.go(-1)">Trở lại</a></span>';
             exit;
-        } else {
-            // Kiểm tra xem tên đăng nhập đã tồn tại chưa
-            $check_username_query = "SELECT * FROM user WHERE username = ?";
-            $stmt = mysqli_prepare($conn, $check_username_query);
-            mysqli_stmt_bind_param($stmt, 's', $tendn);
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
-    
-            if (mysqli_num_rows($result) > 0) {
+        }
+        else {
+            if ($dk_items['username'] == "$tendn") {
                 echo "<span id=\"errformdk\">Tên đăng nhập này đã có. Vui lòng chọn tên đăng nhập khác. <a href='javascript: history.go(-1)'>Trở lại</a></span>";
                 exit;
             } else {
-                // Kiểm tra địa chỉ email có hợp lệ
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                if (!preg_match($regex, $email)) {
                     echo '<span id="errformdk">Địa chỉ email nhập không đúng!<a href="javascript: history.go(-1)">Trở lại</a></span>';
                     exit;
                 } else {
-                    // Kiểm tra số điện thoại có là số nguyên
-                    if (!is_numeric($sdt)) {
+                    if ("is_integer($sdt)" == false) {
                         echo '<span id="errformdk">Số điện thoại nhập không đúng!<a href="javascript: history.go(-1)">Trở lại</a></span>';
                         exit;
                     } else {
-                        // Kiểm tra mật khẩu và xác nhận mật khẩu trùng khớp
                         if ($pw == $xnpw) {
-                            // Chèn dữ liệu vào cơ sở dữ liệu
-                            $insert_query = "INSERT INTO user (fullname, email, phone, username, password, level, address) VALUES (?, ?, ?, ?, ?, 3, ?)";
-                            $stmt = mysqli_prepare($conn, $insert_query);
-                            mysqli_stmt_bind_param($stmt, 'ssssss', $hoten, $email, $sdt, $tendn, $pw, $dcgh);
-                            mysqli_stmt_execute($stmt);
-    
+                            $insert = mysqli_query($conn, "INSERT INTO user (fullname,email,phone,username,password,level,address) VALUE ('" . $hoten . "','" . $email . "','" . $sdt . "','" . $tendn . "','" . $pw . "','3',N'" . $dcgh . "')");
                             echo "<span id=\"errformdk\">Đăng ký thành công!</span>";
-                            header('location: index.php');
+							header('location: index.php');
                         } else {
                             echo '<span id="errformdk">Xác nhận mật khẩu không trùng khớp!</span>';
                         }
                     }
                 }
             }
+
         }
     }
     ?>

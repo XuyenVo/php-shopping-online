@@ -10,7 +10,7 @@
 
 <body class="m-3">
     <h2>THÊM SẢN PHẨM MỚI</h2>
-    <form action="upload_image.php" method="post" name="addProduct" class="col-2" enctype="multipart/form-data">
+    <form action="insert.php" method="post" name="addProduct" class="col-2" enctype="multipart/form-data">
         <div class="form-group m-2">
             <label for="inputInfor" class="col-10">Tên sản phẩm:</label>
             <input class="form-control" type="text" name="ten_sp" placeholder=" " />

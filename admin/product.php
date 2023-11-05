@@ -24,7 +24,7 @@
         }
 
         .table-san-pham tr:nth-child(odd) {
-            background-color: #f2f2f2;
+            background-color: #FEE8B0;
         }
 
         <style>.table {
@@ -53,9 +53,8 @@
         .pagination {
             justify-content: center;
             margin-top: 20px;
-            '
-
         }
+
     </style>
 </head>
 <?php
@@ -121,9 +120,11 @@ echo "</script>";
                             echo "<img src='../images/$imageName' width='150px'><br>"; ?>
                         </td>
                         <td align="center">
-                            <a href='update.php'><i class="fas fa-pencil-alt" style="color: #3776e1;"></i>
+                            <!-- <a href=<?php echo "edit.php?id=" . $row["id"] ?> class="fa fa-pencil" aria-hidden="true"></a> -->
+                            <a href=<?php echo "update_product.php?code_product=" . $row["code_product"] ?>
+                                class="fas fa-pencil-alt" style="color: #3776e1;">
                             <a href="#" class="fas fa-trash-alt" aria-hidden="true"
-                                onclick="confirmDelete('<?php echo $row['code_product'] ?>')"></a>
+                                    onclick="confirmDelete('<?php echo $row['code_product'] ?>')"></a>
                         </td>
                         <?php
                         $count = $count + 1;

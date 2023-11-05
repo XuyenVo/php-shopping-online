@@ -114,7 +114,7 @@ include("header.php");
                     </tr>
                     <tr>
                         <td class="sum_name">Vận chuyển:</td>
-                        <td class="sum_value">' . number_format($pvc) . 'VNĐ (đang để random)</td>
+                        <td class="sum_value">' . number_format($pvc) . 'VNĐ</td>
                     </tr>
                     <tr>
                         <td class="sum_name">GTGT (10%):</td>

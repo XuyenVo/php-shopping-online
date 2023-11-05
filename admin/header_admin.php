@@ -2,6 +2,11 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .container-fluid{
+            background-color: #9CA777;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,7 +33,7 @@
     <div class="menu-tab">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="product.php">Quản lý sản phẩm</a>
+                <a class="nav-link" aria-current="page" href="product.php">Quản lý sản phẩm</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Đăng sản phẩm mới</a>
