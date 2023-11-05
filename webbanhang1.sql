@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 05, 2023 at 03:57 PM
--- Server version: 8.0.31
--- PHP Version: 8.0.26
+-- Generation Time: Oct 28, 2023 at 04:15 AM
+-- Server version: 5.7.36
+-- PHP Version: 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,15 +29,15 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE IF NOT EXISTS `admin` (
-  `id` int NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `fullname` varchar(50) NOT NULL,
-  `level` int NOT NULL,
-  `idgroup` int NOT NULL,
+  `level` int(4) NOT NULL,
+  `idgroup` int(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admin`
@@ -55,59 +55,20 @@ INSERT INTO `admin` (`id`, `username`, `password`, `email`, `fullname`, `level`,
 
 DROP TABLE IF EXISTS `banner`;
 CREATE TABLE IF NOT EXISTS `banner` (
-  `id_banner` int NOT NULL AUTO_INCREMENT,
-  `name_banner` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `link_banner` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `id_banner` int(11) NOT NULL AUTO_INCREMENT,
+  `name_banner` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `link_banner` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id_banner`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `banner`
 --
 
 INSERT INTO `banner` (`id_banner`, `name_banner`, `link_banner`) VALUES
-(1, 'giảm giá các sản phẩm 30%', 'slideshow1.jpg'),
-(2, 'commingsoon', 'slideshow2.jpg'),
-(3, 'opening soon', 'slideshow3.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `chitietdonhang`
---
-
-DROP TABLE IF EXISTS `chitietdonhang`;
-CREATE TABLE IF NOT EXISTS `chitietdonhang` (
-  `id_chitiet` int NOT NULL AUTO_INCREMENT,
-  `chitiet_soluong` int NOT NULL,
-  `chitiet_tonggia` decimal(10,0) NOT NULL,
-  `id_sp` int NOT NULL,
-  `id_donhang` int NOT NULL,
-  PRIMARY KEY (`id_chitiet`),
-  KEY `fk_idsp` (`id_sp`),
-  KEY `fk_iddonhang` (`id_donhang`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
-
---
--- Dumping data for table `chitietdonhang`
---
-
-INSERT INTO `chitietdonhang` (`id_chitiet`, `chitiet_soluong`, `chitiet_tonggia`, `id_sp`, `id_donhang`) VALUES
-(12, 1, '395000', 24, 6),
-(2, 1, '2999000', 18, 1),
-(3, 2, '3198000', 20, 1),
-(4, 1, '1599000', 20, 2),
-(5, 1, '1599000', 20, 2),
-(6, 6, '2370000', 24, 3),
-(7, 1, '395000', 24, 3),
-(8, 4, '8760000', 53, 2),
-(9, 1, '2200000', 19, 4),
-(10, 1, '1875000', 16, 2),
-(11, 2, '1990000', 25, 5),
-(13, 2, '4798000', 52, 6),
-(14, 2, '4380000', 53, 7),
-(15, 1, '2200000', 19, 7),
-(16, 1, '2200000', 19, 6);
+(1, 'giảm giá các sản phẩm 50%', 'slideshow.jpg'),
+(2, 'túi xách thời trang', 'slideshow_1.jpg'),
+(3, 'túi xinh quà đẹp', 'slideshow_2.jpg');
 
 -- --------------------------------------------------------
 
@@ -117,27 +78,14 @@ INSERT INTO `chitietdonhang` (`id_chitiet`, `chitiet_soluong`, `chitiet_tonggia`
 
 DROP TABLE IF EXISTS `donhang`;
 CREATE TABLE IF NOT EXISTS `donhang` (
-  `transaction_id` int NOT NULL,
-  `id` int NOT NULL AUTO_INCREMENT,
-  `slspdh` int NOT NULL DEFAULT '0',
+  `transaction_id` int(255) NOT NULL,
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `product_id` int(255) NOT NULL,
+  `slspdh` int(11) NOT NULL DEFAULT '0',
   `amount` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `status` tinyint NOT NULL DEFAULT '0',
-  `Ngay_dat_hang` datetime NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
-
---
--- Dumping data for table `donhang`
---
-
-INSERT INTO `donhang` (`transaction_id`, `id`, `slspdh`, `amount`, `status`, `Ngay_dat_hang`) VALUES
-(0, 1, 3, '6197000.0000', 1, '2023-11-05 08:32:56'),
-(0, 2, 0, '13833000.0000', 1, '2023-10-18 15:55:11'),
-(0, 3, 0, '2765000.0000', 0, '2023-09-27 15:55:11'),
-(0, 4, 0, '2200000.0000', 0, '2023-08-22 15:56:40'),
-(0, 5, 0, '1990000.0000', 0, '2023-10-31 15:56:40'),
-(0, 6, 0, '5193000.0000', 0, '2023-07-18 15:57:19'),
-(0, 7, 0, '6580000.0000', 1, '2023-08-22 22:50:01');
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -147,19 +95,19 @@ INSERT INTO `donhang` (`transaction_id`, `id`, `slspdh`, `amount`, `status`, `Ng
 
 DROP TABLE IF EXISTS `giaodich`;
 CREATE TABLE IF NOT EXISTS `giaodich` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `status` tinyint NOT NULL DEFAULT '0',
-  `user_id` int NOT NULL DEFAULT '0',
-  `user_name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `user_email` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
-  `user_phone` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `user_id` int(11) NOT NULL DEFAULT '0',
+  `user_name` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `user_email` varchar(50) COLLATE utf8_bin NOT NULL,
+  `user_phone` varchar(20) COLLATE utf8_bin NOT NULL,
   `amount` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `payment` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `payment_info` text CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
-  `message` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
-  `created` int NOT NULL DEFAULT '0',
+  `payment` varchar(32) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `payment_info` text COLLATE utf8_bin NOT NULL,
+  `message` varchar(255) COLLATE utf8_bin NOT NULL,
+  `created` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
 
@@ -169,11 +117,11 @@ CREATE TABLE IF NOT EXISTS `giaodich` (
 
 DROP TABLE IF EXISTS `logo`;
 CREATE TABLE IF NOT EXISTS `logo` (
-  `id_logo` int NOT NULL AUTO_INCREMENT,
-  `name_logo` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `image_logo` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `id_logo` int(11) NOT NULL AUTO_INCREMENT,
+  `name_logo` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_logo` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id_logo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `logo`
@@ -190,11 +138,11 @@ INSERT INTO `logo` (`id_logo`, `name_logo`, `image_logo`) VALUES
 
 DROP TABLE IF EXISTS `menu`;
 CREATE TABLE IF NOT EXISTS `menu` (
-  `id_catalog` int NOT NULL AUTO_INCREMENT,
-  `name_menu` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `invalid_menu` varchar(30) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
+  `id_catalog` int(11) NOT NULL AUTO_INCREMENT,
+  `name_menu` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `invalid_menu` varchar(30) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id_catalog`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `menu`
@@ -213,27 +161,27 @@ INSERT INTO `menu` (`id_catalog`, `name_menu`, `invalid_menu`) VALUES
 
 DROP TABLE IF EXISTS `sanpham`;
 CREATE TABLE IF NOT EXISTS `sanpham` (
-  `id_sanpham` int NOT NULL AUTO_INCREMENT,
-  `id_catalog` int NOT NULL,
-  `id_sub` int NOT NULL,
-  `tensp` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `code_product` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
+  `id_sanpham` int(255) NOT NULL AUTO_INCREMENT,
+  `id_catalog` int(11) NOT NULL,
+  `id_sub` int(11) NOT NULL,
+  `tensp` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `code_product` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
-  `description` text CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci,
-  `content` varchar(1000) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `discount` int DEFAULT NULL,
-  `image_sp` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
+  `description` text COLLATE utf8_unicode_ci,
+  `content` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `discount` int(11) DEFAULT NULL,
+  `image_sp` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `created` date DEFAULT NULL,
-  `view` int DEFAULT '0',
-  `xuatxu` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `sizess` varchar(10) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `mausac` varchar(20) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `parent_name_menu` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
-  `parent_name_sub` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
+  `view` int(11) DEFAULT '0',
+  `xuatxu` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `sizess` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mausac` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `parent_name_menu` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `parent_name_sub` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id_sanpham`),
   KEY `id_catalog` (`id_catalog`),
   KEY `id_catalog_2` (`id_catalog`)
-) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sanpham`
@@ -264,12 +212,12 @@ INSERT INTO `sanpham` (`id_sanpham`, `id_catalog`, `id_sub`, `tensp`, `code_prod
 
 DROP TABLE IF EXISTS `sub_menu`;
 CREATE TABLE IF NOT EXISTS `sub_menu` (
-  `id_sub` int NOT NULL AUTO_INCREMENT,
-  `name_sub` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `ivalid_name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `id_catalog` int NOT NULL,
+  `id_sub` int(11) NOT NULL AUTO_INCREMENT,
+  `name_sub` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `ivalid_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `id_catalog` int(11) NOT NULL,
   PRIMARY KEY (`id_sub`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sub_menu`
@@ -290,18 +238,18 @@ INSERT INTO `sub_menu` (`id_sub`, `name_sub`, `ivalid_name`, `id_catalog`) VALUE
 
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `password` varchar(40) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `fullname` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `phone` varchar(15) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `address` varchar(128) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci NOT NULL,
-  `created` int NOT NULL,
-  `level` int DEFAULT NULL,
-  `idgroup` int NOT NULL,
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `fullname` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
+  `created` int(11) NOT NULL,
+  `level` int(4) DEFAULT NULL,
+  `idgroup` int(4) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `user`

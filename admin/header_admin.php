@@ -36,10 +36,7 @@
                 <a class="nav-link" aria-current="page" href="product.php">Quản lý sản phẩm</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Đăng sản phẩm mới</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Thống kê</a>
+                <a class="nav-link" href="thongke.php">Thống kê</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Quản lý tài khoản</a>
